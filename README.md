@@ -11,4 +11,6 @@ Allows you to automatically install and configure:
 - PostresSQL
 - OwnCloud (in progress)
 
+To enable/disable element setup, just edit the header of *setup.sh* file and put 1/0, respectively.
+
 I use it a lot with my Raspberry Pi. There's some hardcoded configs for me, but maybe I will create some configs for that. Anyway, it's a simple script, you can just edit whatever you want :)
