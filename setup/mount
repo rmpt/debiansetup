@@ -1,0 +1,24 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          Mount
+# Required-Start:    $network $remote_fs $syslog
+# Required-Stop:     $network $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start Mount at boot time
+# Description:       Start Mount.
+### END INIT INFO
+
+echo "Starting mount process."
+
+# Music folder: /media/elements/MP3
+#/bin/mount -t cifs //192.168.2.253/Disk_a1/MP3 /media/elements/MP3 -o username=anonymous,password=,uid=1000
+
+# Music folder: /media/elements/Video | uid: 110 transmission
+#/bin/mount -t cifs //192.168.2.253/Disk_a1/Video /media/elements/Video -o username=anonymous,password=,uid=107,gid=1000
+
+
+#/bin/mount /dev/sda1 /media/elements/
+/bin/mount -t ntfs -ouser,umask=0000 /dev/sda1 /media/elements
+
+exit 0
